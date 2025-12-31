@@ -1,0 +1,28 @@
+
+CONSULTATION REPORT
+==================
+
+Hospital: apollo
+Address: Shalini nivas shivaji nager near shantabai high school
+
+Patient Name: adarsh
+Age: 22
+Gender: Male
+
+Date: 27-12-2025 18:20
+
+VITALS
+------
+BP: 
+Sugar: 
+Temperature: 
+
+DIAGNOSIS
+---------
+
+
+MEDICINES
+---------
+
+
+Report Generated: 27-12-2025 18:20

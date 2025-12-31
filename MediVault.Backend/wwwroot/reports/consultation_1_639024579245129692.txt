@@ -1,0 +1,28 @@
+
+CONSULTATION REPORT
+==================
+
+Hospital: max
+Address: shivaji
+
+Patient Name: adarsh
+Age: 22
+Gender: Male
+
+Date: 27-12-2025 18:45
+
+VITALS
+------
+BP: 120
+Sugar: 0
+Temperature: 98
+
+DIAGNOSIS
+---------
+fever
+
+MEDICINES
+---------
+maxi
+
+Report Generated: 27-12-2025 18:45

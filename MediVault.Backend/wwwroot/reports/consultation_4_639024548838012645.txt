@@ -1,0 +1,28 @@
+
+CONSULTATION REPORT
+==================
+
+Hospital: apollo
+Address: Shalini nivas shivaji nager near shantabai high school
+
+Patient Name: Sanket Satishrao Kulkarni
+Age: 21
+Gender: Male
+
+Date: 27-12-2025 17:54
+
+VITALS
+------
+BP: 80
+Sugar: 90
+Temperature: 98
+
+DIAGNOSIS
+---------
+fever
+
+MEDICINES
+---------
+max
+
+Report Generated: 27-12-2025 17:54
