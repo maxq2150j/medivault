@@ -1,0 +1,29 @@
+MEDICAL CONSULTATION REPORT
+=====================================
+Date: 28/12/2025, 1:40:46 pm
+Doctor: john
+Specialization: lungs
+License: 123
+
+PATIENT INFORMATION
+=====================================
+Name: sanket
+Age: 22
+Gender: Male
+
+CONSULTATION DETAILS
+=====================================
+Blood Pressure: 120
+Sugar Level: 98
+Temperature: 98°C
+
+DIAGNOSIS
+=====================================
+fever
+
+MEDICINES PRESCRIBED
+=====================================
+maximisine
+
+=====================================
+Generated on: 28/12/2025, 1:40:46 pm

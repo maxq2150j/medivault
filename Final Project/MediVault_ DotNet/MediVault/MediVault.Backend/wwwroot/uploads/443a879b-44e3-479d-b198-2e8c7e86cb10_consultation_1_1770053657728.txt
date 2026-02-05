@@ -1,0 +1,29 @@
+MEDICAL CONSULTATION REPORT
+=====================================
+Date: 2/2/2026, 11:04:17 PM
+Doctor: NIPUN MADAAN
+Specialization: Cardiology
+License: 876768888797
+
+PATIENT INFORMATION
+=====================================
+Name: VEDANT PADAVE
+Age: 22
+Gender: Male
+
+CONSULTATION DETAILS
+=====================================
+Blood Pressure: 112
+Sugar Level: 102
+Temperature: 99°C
+
+DIAGNOSIS
+=====================================
+N/A
+
+MEDICINES PRESCRIBED
+=====================================
+N/A
+
+=====================================
+Generated on: 2/2/2026, 11:04:17 PM

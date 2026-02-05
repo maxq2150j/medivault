@@ -1,0 +1,762 @@
+[
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "GetAllDoctors",
+    "RelativePath": "api/Admin/doctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "ToggleDoctorStatus",
+    "RelativePath": "api/Admin/doctors/{doctorId}/toggle-status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "GetHospitals",
+    "RelativePath": "api/Admin/hospitals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "AddHospital",
+    "RelativePath": "api/Admin/hospitals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RegisterHospitalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "ToggleHospitalStatus",
+    "RelativePath": "api/Admin/hospitals/{id}/toggle-status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AdminController",
+    "Method": "GetStats",
+    "RelativePath": "api/Admin/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AuthController",
+    "Method": "DebugGetAdmin",
+    "RelativePath": "api/Auth/debug/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AuthController",
+    "Method": "RegisterDoctor",
+    "RelativePath": "api/Auth/register/doctor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RegisterDoctorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AuthController",
+    "Method": "RegisterHospital",
+    "RelativePath": "api/Auth/register/hospital",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RegisterHospitalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.AuthController",
+    "Method": "RegisterPatient",
+    "RelativePath": "api/Auth/register/patient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RegisterPatientRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetDoctorProfile",
+    "RelativePath": "api/Doctor/{doctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetDoctorAppointments",
+    "RelativePath": "api/Doctor/{doctorId}/appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "UpdateDoctorPassword",
+    "RelativePath": "api/Doctor/{doctorId}/password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.UpdateDoctorPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "UpdateDoctorProfile",
+    "RelativePath": "api/Doctor/{doctorId}/profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.UpdateDoctorProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetPaymentStatus",
+    "RelativePath": "api/Doctor/appointments/{appointmentId}/payment-status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "RequestPayment",
+    "RelativePath": "api/Doctor/appointments/{appointmentId}/request-payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RequestPaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "UpdateAppointmentStatus",
+    "RelativePath": "api/Doctor/appointments/{appointmentId}/status",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.UpdateAppointmentStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetDoctorsByHospital",
+    "RelativePath": "api/Doctor/hospital/{hospitalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetPatientHistory",
+    "RelativePath": "api/Doctor/patient-history/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "accessRequestId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "GetPatientRecords",
+    "RelativePath": "api/Doctor/records/patient/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "RequestAccess",
+    "RelativePath": "api/Doctor/request-access",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.RequestAccessDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "SearchPatients",
+    "RelativePath": "api/Doctor/search-patients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "SubmitConsultation",
+    "RelativePath": "api/Doctor/submit-consultation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.SubmitConsultationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "UploadMedicalRecord",
+    "RelativePath": "api/Doctor/upload-record",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DoctorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecordType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.DoctorController",
+    "Method": "VerifyOTP",
+    "RelativePath": "api/Doctor/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.VerifyOTPDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "AddConsultation",
+    "RelativePath": "api/Hospital/consultation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.CreateConsultationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "GetHospitalDoctors",
+    "RelativePath": "api/Hospital/doctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "UpdateDoctorActive",
+    "RelativePath": "api/Hospital/doctors/{doctorId}/active",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.UpdateDoctorActiveRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "GetPatientFiles",
+    "RelativePath": "api/Hospital/patient-files/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "RequestOtp",
+    "RelativePath": "api/Hospital/request-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.OtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "SearchPatient",
+    "RelativePath": "api/Hospital/search-patient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "UploadFile",
+    "RelativePath": "api/Hospital/upload-file",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.HospitalController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Hospital/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.VerifyOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "CreateAppointment",
+    "RelativePath": "api/Patient/appointments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.CreateAppointmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetMyAppointments",
+    "RelativePath": "api/Patient/appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "InitiatePayment",
+    "RelativePath": "api/Patient/appointments/{appointmentId}/initiate-payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetAppointmentPaymentStatus",
+    "RelativePath": "api/Patient/appointments/{appointmentId}/payment-status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "VerifyPayment",
+    "RelativePath": "api/Patient/appointments/{appointmentId}/verify-payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MediVault.Backend.Controllers.VerifyPaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetConsultations",
+    "RelativePath": "api/Patient/consultations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetDoctorsByHospital",
+    "RelativePath": "api/Patient/doctors-by-hospital/{hospitalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetHospitals",
+    "RelativePath": "api/Patient/hospitals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetOtpHistory",
+    "RelativePath": "api/Patient/otp-history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Patient/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediVault.Backend.Controllers.PatientController",
+    "Method": "GetRecords",
+    "RelativePath": "api/Patient/records",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,125 @@
+.hospital-dashboard {
+    background: #f6f8fb;
+    min-height: 100vh;
+    padding-bottom: 32px;
+}
+
+.hospital-dashboard .card {
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.hospital-dashboard .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+    border-color: #cdd4e0;
+}
+
+.hospital-dashboard .card-header {
+    border-bottom: 1px solid #e4e7ec;
+    font-weight: 600;
+}
+
+.hospital-dashboard .list-group-item {
+    border: 1px solid #eef0f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease, background-color 0.14s ease;
+}
+
+.hospital-dashboard .list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.hospital-dashboard .list-group-item:hover {
+    transform: translateY(-2px);
+    border-color: #d3daf0;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.08);
+    background-color: #f8fbff;
+}
+
+.hospital-dashboard .badge {
+    font-weight: 600;
+    transition: transform 0.12s ease;
+}
+
+.hospital-dashboard .badge:hover {
+    transform: scale(1.05);
+}
+
+.hospital-dashboard .btn {
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.hospital-dashboard .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+}
+
+.hospital-dashboard .btn-primary:hover {
+    box-shadow: 0 8px 16px rgba(13, 110, 253, 0.3);
+}
+
+.hospital-dashboard .nav-tabs .nav-link {
+    transition: border-color 0.14s ease, color 0.14s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.hospital-dashboard .nav-tabs .nav-link:hover {
+    border-bottom-color: #0d6efd;
+    color: #0d6efd;
+}
+
+.hospital-dashboard .form-control,
+.hospital-dashboard .form-select {
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.hospital-dashboard .form-control:focus,
+.hospital-dashboard .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.hospital-dashboard .form-control:hover,
+.hospital-dashboard .form-select:hover {
+    border-color: #d3daf0;
+}
+
+.hospital-dashboard table {
+    border-collapse: collapse;
+}
+
+.hospital-dashboard tbody tr {
+    border-bottom: 1px solid #eef0f4;
+    transition: background-color 0.14s ease, box-shadow 0.14s ease;
+}
+
+.hospital-dashboard tbody tr:hover {
+    background-color: #f8fbff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.hospital-dashboard .modal-content {
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hospital-dashboard .table-hover tbody tr:hover {
+    background-color: #f8fbff;
+}
+
+@media (max-width: 768px) {
+    .hospital-dashboard .card {
+        margin-bottom: 12px;
+    }
+
+    .hospital-dashboard table {
+        font-size: 0.9rem;
+    }
+}

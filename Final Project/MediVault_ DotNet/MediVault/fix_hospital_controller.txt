@@ -1,0 +1,9 @@
+BACKEND FIX NEEDED:
+
+In HospitalController.cs line 250, change:
+return Ok(new { message = $"Doctor {(request.IsActive ? "activated" : "deactivated")}", doctor.Id, doctor.IsActive });
+
+TO:
+return Ok(new { message = $"Doctor {(request.IsActive ? "activated" : "deactivated")} successfully", doctor.Id, doctor.IsActive });
+
+This will add "successfully" to match the Admin Dashboard format.
