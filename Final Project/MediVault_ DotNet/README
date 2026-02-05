@@ -1,0 +1,373 @@
+# MediVault - ASP.NET Core Backend
+
+A robust healthcare management API built with ASP.NET Core 9.0, Entity Framework Core, and MySQL.
+
+## 🚀 Quick Start
+
+### Prerequisites
+- .NET 9.0 SDK or later
+- MySQL Server 5.7+
+- Visual Studio 2022 or VS Code
+
+### Setup Instructions
+
+1. **Clone and navigate to project**:
+   ```bash
+   cd MediVault.Backend
+   ```
+
+2. **Configure Database Connection**
+
+   Update `appsettings.json`:
+   ```json
+   {
+     "ConnectionStrings": {
+       "DefaultConnection": "Server=localhost;Database=MediVault;User=root;Password=your_password;Port=3306;"
+     },
+     "Jwt": {
+       "Key": "your-secret-key-here"
+     },
+     "Smtp": {
+       "Host": "smtp.gmail.com",
+       "Port": 587,
+       "Username": "your-email@gmail.com",
+       "Password": "your-app-password"
+     }
+   }
+   ```
+
+3. **Restore NuGet Packages**:
+   ```bash
+   dotnet restore
+   ```
+
+4. **Apply Database Migrations**:
+   ```bash
+   dotnet ef database update
+   ```
+
+5. **Run the Application**:
+   ```bash
+   dotnet run
+   ```
+
+   API will be available at: `http://localhost:5000`
+   Swagger UI: `http://localhost:5000/swagger`
+
+## 📦 Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| Pomelo.EntityFrameworkCore.MySql | 9.0.0 | MySQL database provider |
+| Microsoft.AspNetCore.Authentication.JwtBearer | 9.0.0 | JWT authentication |
+| Swashbuckle.AspNetCore | 10.1.0 | API documentation |
+| iTextSharp.LGPLv2.Core | 3.7.12 | PDF generation |
+| RestSharp | 107.3.0 | HTTP client |
+
+## 🏗️ Project Structure
+
+```
+MediVault.Backend/
+├── Controllers/
+│   ├── AdminController.cs          # Admin operations
+│   ├── AuthController.cs           # Authentication
+│   ├── DoctorController.cs         # Doctor operations
+│   ├── HospitalController.cs       # Hospital management
+│   └── PatientController.cs        # Patient operations
+├── Models/
+│   ├── User.cs                     # Base user model
+│   ├── Patient.cs                  # Patient profile
+│   ├── Doctor.cs                   # Doctor profile
+│   ├── Hospital.cs                 # Hospital profile
+│   ├── Appointment.cs              # Appointments
+│   ├── Consultation.cs             # Consultations
+│   ├── Payment.cs                  # Payments
+│   ├── PatientFile.cs              # Medical files
+│   └── OtpRecord.cs                # OTP management
+├── Services/
+│   ├── EmailService.cs             # Email notifications
+│   ├── PdfService.cs               # PDF generation
+│   └── PaymentService.cs           # Payment processing
+├── Data/
+│   └── AppDbContext.cs             # Entity Framework context
+├── Migrations/                      # Database migrations
+├── Program.cs                       # Application startup
+├── appsettings.json                # Configuration
+└── MediVault.Backend.csproj        # Project file
+```
+
+## 🔐 Authentication
+
+JWT-based authentication with the following claims:
+- User ID
+- Email
+- Role (Admin, Doctor, Patient, Hospital)
+- Additional permissions
+
+### Getting a Token
+
+```bash
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+```
+
+Response:
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": {
+    "id": "user-id",
+    "email": "user@example.com",
+    "role": "patient"
+  }
+}
+```
+
+### Using the Token
+
+Include in request headers:
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+## 📚 Key Controllers
+
+### AuthController
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
+- `POST /api/auth/refresh-token` - Refresh token
+- `POST /api/auth/request-otp` - Request OTP for verification
+- `POST /api/auth/verify-otp` - Verify OTP
+
+### PatientController
+- `GET /api/patients/{id}` - Get patient profile
+- `PUT /api/patients/{id}` - Update patient profile
+- `GET /api/patients/{id}/files` - Get patient medical files
+- `POST /api/patients/{id}/files` - Upload medical file
+- `GET /api/patients/{id}/appointments` - List patient appointments
+- `GET /api/patients/{id}/consultations` - List consultations
+
+### DoctorController
+- `GET /api/doctors` - List all doctors
+- `GET /api/doctors/{id}` - Get doctor profile
+- `GET /api/doctors/{id}/consultations` - List doctor consultations
+- `POST /api/doctors/access-request` - Request patient access
+- `GET /api/doctors/access-requests` - List access requests
+
+### HospitalController
+- `POST /api/hospitals` - Register hospital
+- `GET /api/hospitals/{id}` - Get hospital details
+- `PUT /api/hospitals/{id}` - Update hospital
+- `GET /api/hospitals/{id}/doctors` - List hospital doctors
+
+### AdminController
+- `GET /api/admin/users` - List all users
+- `GET /api/admin/stats` - Get system statistics
+- `PUT /api/admin/users/{id}/role` - Update user role
+- `DELETE /api/admin/users/{id}` - Delete user account
+
+## 💾 Database Models
+
+### User (Base Entity)
+- Id (Guid)
+- Email (string)
+- PasswordHash (string)
+- FirstName, LastName (string)
+- Role (enum: Admin, Doctor, Patient, Hospital)
+- CreatedAt, UpdatedAt (DateTime)
+
+### Patient
+- Id (Guid)
+- UserId (FK)
+- Age (int)
+- Gender (string)
+- BloodType (string)
+- MedicalHistory (string)
+- InsuranceProvider (string)
+
+### Doctor
+- Id (Guid)
+- UserId (FK)
+- HospitalId (FK)
+- Specialization (string)
+- LicenseNumber (string)
+- Experience (int)
+- Qualifications (string)
+
+### Appointment
+- Id (Guid)
+- PatientId (FK)
+- DoctorId (FK)
+- ScheduledDate (DateTime)
+- Status (enum: Pending, Confirmed, Completed, Cancelled)
+- Notes (string)
+
+### Consultation
+- Id (Guid)
+- PatientId (FK)
+- DoctorId (FK)
+- ConsultationDate (DateTime)
+- Diagnosis (string)
+- Prescription (string)
+- Notes (string)
+
+### Payment
+- Id (Guid)
+- PatientId (FK)
+- Amount (decimal)
+- PaymentDate (DateTime)
+- Status (enum: Pending, Success, Failed)
+- TransactionId (string)
+
+## 🔧 Configuration Files
+
+### appsettings.json
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=MediVault;User=root;Password=password;Port=3306;"
+  },
+  "Jwt": {
+    "Key": "YourSuperSecretKeyThatIsAtLeast32CharactersLong"
+  },
+  "Smtp": {
+    "Host": "smtp.gmail.com",
+    "Port": 587,
+    "Username": "your-email@gmail.com",
+    "Password": "app-specific-password"
+  },
+  "AllowedHosts": "*"
+}
+```
+
+### launchSettings.json
+Modify to change default port and profile settings:
+```json
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}
+```
+
+## 📝 API Examples
+
+### Register User
+```bash
+curl -X POST http://localhost:5000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "patient@example.com",
+    "password": "SecurePassword123!",
+    "firstName": "John",
+    "lastName": "Doe",
+    "role": "patient"
+  }'
+```
+
+### Login
+```bash
+curl -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "patient@example.com",
+    "password": "SecurePassword123!"
+  }'
+```
+
+### Book Appointment
+```bash
+curl -X POST http://localhost:5000/api/appointments \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{
+    "doctorId": "doctor-id",
+    "scheduledDate": "2025-02-15T10:00:00",
+    "notes": "General checkup"
+  }'
+```
+
+## 🚀 Database Migrations
+
+### Creating a New Migration
+```bash
+dotnet ef migrations add MigrationName
+```
+
+### Updating Database
+```bash
+dotnet ef database update
+```
+
+### Reverting Migration
+```bash
+dotnet ef migrations remove
+```
+
+## 🧪 Development
+
+### Building the Project
+```bash
+dotnet build
+```
+
+### Running in Development Mode
+```bash
+dotnet run --configuration Development
+```
+
+### Publishing for Production
+```bash
+dotnet publish -c Release -o ./publish
+```
+
+## 📊 Logging
+
+Logs are configured in `appsettings.json`. By default:
+- **Information** level logs are recorded
+- **Warning** level for Microsoft.AspNetCore namespace
+
+Logs are output to console. Extend with file logging as needed.
+
+## 🔒 Security Features
+
+- ✅ JWT token-based authentication
+- ✅ Password hashing with strong algorithms
+- ✅ Role-based access control (RBAC)
+- ✅ CORS policy configuration
+- ✅ Input validation
+- ✅ Secure database connection
+- ✅ OTP-based verification
+
+## 🐛 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| **Connection failed** | Verify MySQL is running and connection string is correct |
+| **Migration errors** | Delete pending migrations and run `dotnet ef database update` |
+| **Port already in use** | Change port in `launchSettings.json` |
+| **Authentication errors** | Ensure JWT key matches between appsettings.json |
+| **CORS errors** | Add frontend URL to CORS policy in Program.cs |
+
+## 📄 License
+
+MIT License - See main README for details
+
+---
+
+For the complete project overview, see [../README.md](../README.md)
