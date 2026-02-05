@@ -1,0 +1,270 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    position: relative;
+}
+
+.register-shell {
+    width: 100%;
+    max-width: 960px;
+    min-height: 420px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    border-radius: 24px;
+    overflow: hidden;
+    background: #0b1120;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.95);
+    animation: slideInFromCenter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+}
+
+@keyframes slideInFromCenter {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translate(0, 0);
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+.register-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    animation: fadeInDown 0.6s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-form {
+    animation: fadeInUp 0.6s ease-out 0.3s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.register-form .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.register-form .form-control,
+.register-form .form-select {
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
+}
+
+.register-form .form-control:focus,
+.register-form .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    transform: translateY(-2px);
+}
+
+.register-form .form-control:hover:not(:focus),
+.register-form .form-select:hover:not(:focus) {
+    border-color: #d3daf0;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.08);
+}
+
+.register-form .text-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-3px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(3px);
+    }
+}
+
+.register-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    background-color: #198754 !important;
+    color: white !important;
+    cursor: pointer;
+    transition: opacity 0.14s ease, transform 0.14s ease;
+    margin-top: 0.5rem;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+.register-login-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out 0.4s backwards;
+}
+
+.register-login-link a {
+    color: #198754;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.14s ease, text-shadow 0.14s ease;
+}
+
+.register-login-link a:hover {
+    color: #157347;
+    text-shadow: 0 2px 4px rgba(25, 135, 84, 0.2);
+}
+
+.register-panel {
+    padding: 2.5rem 2.75rem;
+}
+
+.register-panel-left {
+    background: radial-gradient(circle at top left, #064e3b 0, #022c22 55%, #022c22 100%);
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-brand-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: rgba(187, 247, 208, 0.16);
+    color: #6ee7b7;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.register-hero-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.register-hero-text {
+    font-size: 0.96rem;
+    color: #d1fae5;
+    max-width: 26rem;
+    margin-bottom: 1.1rem;
+}
+
+.register-hero-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #a7f3d0;
+    font-size: 0.9rem;
+    display: grid;
+    gap: 0.45rem;
+}
+
+.register-hero-bullets li::before {
+    content: '\2022';
+    color: #22c55e;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+.register-panel-right {
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 2.2rem 2rem 2.1rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+    border-radius: 20px;
+    border: none;
+    background: #ffffff;
+}
+
+@media (max-width: 680px) {
+    .register-shell {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 640px;
+    }
+
+    .register-panel {
+        padding: 2rem 1.8rem;
+    }
+
+    .register-panel-right {
+        background: #f3f4f6;
+    }
+
+    .register-form .row {
+        flex-direction: column;
+    }
+
+    .register-form .col-md-6,
+    .register-form .col-md-4 {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .register-container {
+        padding: 1.5rem 1.1rem;
+    }
+}

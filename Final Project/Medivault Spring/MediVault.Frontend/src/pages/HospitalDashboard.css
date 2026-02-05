@@ -1,0 +1,230 @@
+.hospital-dashboard {
+    min-height: 100vh;
+    padding-bottom: 24px;
+}
+
+.hospital-dashboard.theme-dark {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+.hospital-dashboard.light-mode {
+    background: #f5f5f5;
+    color: #222;
+}
+
+.hospital-dashboard-container {
+    max-width: 1100px;
+}
+
+.hospital-dashboard-hero {
+    border-radius: 6px;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+}
+
+.hospital-dashboard.theme-dark .hospital-dashboard-hero {
+    background: #020617;
+}
+
+.hospital-dashboard.light-mode .hospital-dashboard-hero {
+    background: #ffffff;
+}
+
+.hospital-dashboard .dashboard-title {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+    color: var(--primary-hover);
+    font-weight: 700;
+}
+
+.hospital-dashboard .dashboard-subtitle {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.hospital-dashboard.theme-dark .dashboard-subtitle {
+    color: #9ca3af;
+}
+
+.hospital-dashboard.light-mode .dashboard-subtitle {
+    color: #555;
+}
+
+/* Cards - align visual style with patient dashboard */
+.hospital-dashboard .card {
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    border-top: 3px solid var(--primary-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.hospital-dashboard.theme-dark .card {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #1f2937;
+    border-top-color: #2dd4bf;
+}
+
+.hospital-dashboard.light-mode .card {
+    background: #ffffff;
+    color: #222;
+}
+
+.hospital-dashboard .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+}
+
+.hospital-dashboard.theme-dark .card-header {
+    background-color: rgba(45, 212, 191, 0.1);
+    color: #5eead4;
+    border-bottom-color: #334155;
+}
+
+.hospital-dashboard .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f766e;
+}
+
+.hospital-dashboard.theme-dark .section-title {
+    color: #5eead4;
+}
+
+.hospital-dashboard.light-mode .section-title {
+    color: #222;
+}
+
+.hospital-dashboard .section-hint {
+    font-size: 0.8rem;
+}
+
+.hospital-dashboard.theme-dark .section-hint {
+    color: #9ca3af;
+}
+
+.hospital-dashboard.light-mode .section-hint {
+    color: #777;
+}
+
+.hospital-dashboard-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.hospital-dashboard .nav-tabs .nav-link {
+    border-radius: 0;
+    border: 1px solid transparent;
+    margin-right: 4px;
+    padding: 6px 14px;
+    background-color: transparent;
+}
+
+.hospital-dashboard.theme-dark .nav-tabs .nav-link {
+    color: #e5e7eb;
+}
+
+.hospital-dashboard.light-mode .nav-tabs .nav-link {
+    color: #555;
+}
+
+.hospital-dashboard.theme-dark .nav-tabs .nav-link.active {
+    background: #020617;
+    border-color: #4b5563 #4b5563 #020617;
+    color: #ffffff;
+}
+
+.hospital-dashboard.light-mode .nav-tabs .nav-link.active {
+    background: #ffffff;
+    border-color: #ddd #ddd #ffffff;
+    color: #000;
+}
+
+.hospital-dashboard .form-control,
+.hospital-dashboard .form-select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hospital-dashboard.theme-dark .form-control,
+.hospital-dashboard.theme-dark .form-select {
+    background-color: #020617 !important;
+    color: #e5e7eb !important;
+}
+
+/* Make placeholder text clearly visible in dark mode */
+.hospital-dashboard.theme-dark .form-control::placeholder,
+.hospital-dashboard.theme-dark .form-select::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+.hospital-dashboard.light-mode .form-control,
+.hospital-dashboard.light-mode .form-select {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.hospital-dashboard .form-control:focus,
+.hospital-dashboard .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: none;
+}
+
+.hospital-dashboard table {
+    border-collapse: collapse;
+}
+
+.hospital-dashboard .hospital-table thead th {
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.hospital-dashboard.theme-dark .hospital-table tbody tr {
+    background: #020617;
+}
+
+.hospital-dashboard.light-mode .hospital-table tbody tr {
+    background: #ffffff;
+}
+
+.hospital-dashboard.theme-dark .hospital-table tbody tr:hover {
+    background: #111827;
+}
+
+.hospital-dashboard.light-mode .hospital-table tbody tr:hover {
+    background: #f3f4f6;
+}
+
+.hospital-dashboard .hospital-table tbody td,
+.hospital-dashboard .hospital-table thead th {
+    padding: 0.55rem 0.75rem;
+}
+
+.hospital-dashboard .badge {
+    font-weight: 500;
+}
+
+.hospital-dashboard.theme-dark .btn-info {
+    background-color: #22c55e;
+    border-color: #22c55e;
+    color: #ffffff;
+}
+
+.hospital-dashboard.theme-dark .btn-info:hover {
+    background-color: #16a34a;
+    border-color: #16a34a;
+}
+
+@media (max-width: 768px) {
+    .hospital-dashboard .card {
+        margin-bottom: 10px;
+    }
+
+    .hospital-dashboard table {
+        font-size: 0.9rem;
+    }
+}

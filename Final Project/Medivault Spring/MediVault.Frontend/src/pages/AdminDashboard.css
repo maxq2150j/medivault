@@ -1,0 +1,187 @@
+.admin-dashboard {
+    background: #f6f8fb;
+    min-height: 100vh;
+    padding-bottom: 32px;
+}
+
+.admin-dashboard-container {
+    max-width: 1140px;
+}
+
+.admin-dashboard-hero {
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: #e5e7eb;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.45);
+}
+
+.admin-dashboard-hero .dashboard-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.admin-dashboard-hero .dashboard-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.admin-dashboard .card {
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    cursor: pointer;
+}
+
+.admin-table-card {
+    margin-top: 8px;
+}
+
+.stats-card {
+    border-radius: 16px;
+    padding: 4px 2px;
+}
+
+.stats-card .card-body {
+    padding: 14px 16px;
+}
+
+.stats-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+}
+
+.stats-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 4px 0 2px;
+}
+
+.stats-hospitals {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.stats-patients {
+    background: linear-gradient(135deg, #ecfdf5, #dcfce7);
+}
+
+.stats-visits {
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+.recent-card {
+    border-radius: 16px;
+}
+
+.recent-list {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.recent-item {
+    padding: 6px 0;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.recent-item:last-child {
+    border-bottom: none;
+}
+
+.recent-main {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.recent-patient {
+    font-weight: 500;
+}
+
+.recent-hospital {
+    color: #6b7280;
+    margin-left: 8px;
+}
+
+.recent-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.admin-dashboard .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+    border-color: #cdd4e0;
+}
+
+.admin-dashboard .card.bg-primary:hover {
+    box-shadow: 0 12px 28px rgba(13, 110, 253, 0.3);
+}
+
+.admin-dashboard .card.bg-success:hover {
+    box-shadow: 0 12px 28px rgba(25, 135, 84, 0.3);
+}
+
+.admin-dashboard .card.bg-warning:hover {
+    box-shadow: 0 12px 28px rgba(255, 193, 7, 0.3);
+}
+
+.admin-dashboard table {
+    border-collapse: collapse;
+}
+
+.admin-dashboard tbody tr {
+    border-bottom: 1px solid #eef0f4;
+    transition: background-color 0.14s ease, box-shadow 0.14s ease;
+}
+
+.admin-dashboard tbody tr:hover {
+    background-color: #f8fbff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.admin-dashboard .btn {
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.admin-dashboard .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+}
+
+.admin-dashboard .btn-primary:hover {
+    box-shadow: 0 8px 16px rgba(13, 110, 253, 0.3);
+}
+
+.admin-dashboard .modal-content {
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
+}
+
+.admin-dashboard .form-control {
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.admin-dashboard .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.admin-dashboard .form-control:hover {
+    border-color: #d3daf0;
+}
+
+@media (max-width: 768px) {
+    .admin-dashboard .card {
+        margin-bottom: 12px;
+    }
+
+    .admin-dashboard table {
+        font-size: 0.9rem;
+    }
+}
